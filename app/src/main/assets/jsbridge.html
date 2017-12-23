@@ -1,0 +1,38 @@
+<html>
+<head>
+    <script type="text/javascript">
+    function disp_prompt(){
+      var name=prompt("请输入您的名字","Bill Gates")
+      if (name!=null && name!="")
+        {
+            showToast(name);
+        }
+      }
+
+      function showToast(toast) {
+        javascript:javascriptInterface.showToast(toast);
+       }
+
+
+    function asyncPlus(){
+        window.prompt("asyncPlus");
+    }
+
+    </script>
+</head>
+<body>
+
+<input type="button" onclick="disp_prompt()" value="显示一个提示框" />
+
+    <!--<li>-->
+        <!--异步任务<br/>-->
+         <!--<button onclick="JsBridge.call('JSBridge','plus',{'data':1},function(res){console.log(JSON.stringify(res))});">toast</button>-->
+    <!--</li>-->
+
+    <li>
+    异步任务<br/>
+    <button onclick="asyncPlus()">asyncPlus</button>
+    </li>
+
+</body>
+</html>
